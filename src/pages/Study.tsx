@@ -1,9 +1,12 @@
+// External
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
+// Internal
 import Header from '../components/LoggedInHeader';
-import '../styles/StudyPage.css';
 import { AuthContext } from '../context/AuthContext';
+import '../styles/StudyPage.css';
 
 interface ICard {
   _id: string;
@@ -121,14 +124,14 @@ const StudyPage: React.FC = () => {
               </div>
               {renderFerrisWheel()}
               <div className="card-navigation">
-                <button onClick={goToPreviousCard}>
+                <button type="button" onClick={goToPreviousCard}>
                   <img src="/previous.png" alt="Previous" className="nav-icon" />
                 </button>
-                <button onClick={goToNextCard}>
+                <button type="button" onClick={goToNextCard}>
                   <img src="/next.png" alt="Next" className="nav-icon" />
                 </button>
               </div>
-              <button onClick={handleReturnToDashboard} className="return-button">Return to Dashboard</button>
+              <button type="button" onClick={handleReturnToDashboard} className="return-button">Return to Dashboard</button>
             </>
           )
         )}

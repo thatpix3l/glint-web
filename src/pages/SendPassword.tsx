@@ -1,8 +1,11 @@
+// External
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/App.css';
+
+// Internal
 import Header from '../components/Header';
+import '../styles/App.css';
 
 const SendPasswordPage: React.FC = () => {
   const [usernameOrEmail, setUsernameOrEmail] = useState('');

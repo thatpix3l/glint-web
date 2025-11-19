@@ -1,7 +1,10 @@
+// External
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/App.css';
+
+// Internal
 import Header from '../components/Header';
+import '../styles/App.css';
 
 const HomePage: React.FC = () => {
   return (

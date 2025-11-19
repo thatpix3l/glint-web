@@ -1,10 +1,12 @@
-// src/components/InitialAuthCheck.tsx
+// External
 import React, { useEffect, useContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
+
+// Internal
 import Homepage from '../pages/HomePage';
 import Dashboard from '../pages/Dashboard';
+import { AuthContext } from '../context/AuthContext';
 
 const InitialAuthCheck: React.FC = () => {
   const { setUser } = useContext(AuthContext);

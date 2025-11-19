@@ -1,6 +1,8 @@
-// src/components/Header.tsx
+// External
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+// Internal
 import '../styles/Header.css';
 
 const Header: React.FC = () => {

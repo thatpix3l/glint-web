@@ -1,3 +1,4 @@
+// External
 import React from 'react';
 
 const VerifyEmail: React.FC = () => {

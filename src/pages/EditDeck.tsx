@@ -1,9 +1,11 @@
+// External
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
+// Internal
 import Header from '../components/LoggedInHeader';
 import '../styles/EditDeckPage.css';
-import useAuth from '../hooks/useAuth';
 
 interface IDeck {
   _id: string;
@@ -24,10 +26,9 @@ interface ErrorResponse {
 }
 
 const EditDeckPage: React.FC = () => {
-  const { user } = useAuth();
   const { deckId } = useParams<{ deckId: string }>();
   const navigate = useNavigate();
-  const [deck, setDeck] = useState<IDeck | null>(null);
+  const [_, setDeck] = useState<IDeck | null>(null);
   const [cards, setCards] = useState<ICard[]>([]);
   const [newName, setNewName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -246,10 +247,10 @@ const EditDeckPage: React.FC = () => {
           ))}
         </div>
         <div className="button-container">
-          <button onClick={addCard} className="add-card-btn">
+          <button type="button" onClick={addCard} className="add-card-btn">
             + Add Card
           </button>
-          <button onClick={handleReturnToDashboard} className="create-btn">
+          <button type="button" onClick={handleReturnToDashboard} className="create-btn">
             Return to Dashboard
           </button>
         </div>

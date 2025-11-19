@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react';
+// External
+import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link, useLocation } from 'react-router-dom';
-import '../styles/App.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+//Internal
 import Header from '../components/Header';
-import { AuthContext } from '../context/AuthContext';
+import '../styles/App.css';
 
 const ResetPasswordPage: React.FC = () => {
   const [password, setPassword] = useState('');

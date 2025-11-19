@@ -1,4 +1,7 @@
+// External
 import React, { useState, useEffect } from 'react';
+
+// Internal
 import '../styles/Modal.css';
 
 interface ICard {

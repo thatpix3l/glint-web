@@ -1,6 +1,8 @@
-// src/hooks/useAuth.ts
+// External
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// Internal
 import { AuthContext } from '../context/AuthContext';
 
 const useAuth = () => {

@@ -1,11 +1,13 @@
-// src/pages/Dashboard.tsx
+// External
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+// Internal
 import Modal from '../components/Modal';
 import Header from '../components/LoggedInHeader';
-import '../styles/Dashboard.css';
-import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import '../styles/Dashboard.css';
 
 interface IDeck {
   _id: string;
@@ -111,7 +113,7 @@ const Dashboard: React.FC = () => {
       return;
     }
 
-    const isConfirmed = window.confirm('Are you sure you want to delete this deck?');
+    const isConfirmed = globalThis.confirm('Are you sure you want to delete this deck?');
 
     if (isConfirmed) {
       try {
@@ -188,9 +190,9 @@ const Dashboard: React.FC = () => {
               {decks.map((deck) => (
                 <div key={deck._id} className="deck-card">
                   <h2>{deck.name}</h2>
-                  <button onClick={() => handleEditDeck(deck._id)}>Edit</button>
-                  <button onClick={() => handleStudyDeck(deck._id)}>Study</button>
-                  <button onClick={() => handleDeleteDeck(deck._id)}>Delete</button>
+                  <button type="button" onClick={() => handleEditDeck(deck._id)}>Edit</button>
+                  <button type="button" onClick={() => handleStudyDeck(deck._id)}>Study</button>
+                  <button type="button" onClick={() => handleDeleteDeck(deck._id)}>Delete</button>
                 </div>
               ))}
               <div className="deck-card add-set-card" onClick={openCreateModal}>

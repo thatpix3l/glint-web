@@ -1,9 +1,12 @@
+// External
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import '../styles/App.css';
+
+// Internal
 import Header from '../components/Header';
 import { AuthContext } from '../context/AuthContext';
+import '../styles/App.css';
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');

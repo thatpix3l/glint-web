@@ -1,5 +1,7 @@
-// src/pages/AboutUs.tsx
+// External
 import React from 'react';
+
+// Internal
 import Header from '../components/Header';
 import '../styles/AboutUs.css';
 
