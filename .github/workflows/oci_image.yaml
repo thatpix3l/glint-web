@@ -28,5 +28,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: thatpix3l/glint-web:latest
+          tags: ghcr.io/thatpix3l/glint-web:latest
           file: Containerfile
