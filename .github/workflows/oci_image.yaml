@@ -29,3 +29,4 @@ jobs:
         with:
           push: true
           tags: thatpix3l/glint-web:latest
+          file: Containerfile
