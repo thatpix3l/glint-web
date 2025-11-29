@@ -18,7 +18,7 @@ import InitialAuthCheck from './components/InitialAuthCheck';
 const App: React.FC = () => {
   return (
     <AuthProvider>
-      <Router future={{v7_relativeSplatPath: true, v7_startTransition: true}}>
+      <Router>
         <div className="App">
           <Routes>
             <Route path="/" element={<InitialAuthCheck />} />
